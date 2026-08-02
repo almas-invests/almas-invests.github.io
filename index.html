@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Almas Invests</title>
+<meta name="description" content="All my links in one place.">
+<meta property="og:title" content="Almas Invests">
+<meta property="og:description" content="All my links in one place.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-XXXXXXXXXX');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b0f14;
+    --bg-accent:#12303a;
+    --card:rgba(255,255,255,.06);
+    --card-hover:rgba(255,255,255,.12);
+    --border:rgba(255,255,255,.12);
+    --text:#f2f5f7;
+    --muted:#9aa7b2;
+    --accent:#3ddc97;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+    color:var(--text);
+    background:
+      radial-gradient(900px 600px at 50% -10%, var(--bg-accent), transparent 70%),
+      var(--bg);
+    background-attachment:fixed;
+    display:flex;
+    justify-content:center;
+    padding:56px 20px 72px;
+  }
+  .page{width:100%;max-width:520px;text-align:center}
+
+  .avatar{
+    width:112px;height:112px;border-radius:50%;
+    object-fit:cover;display:block;margin:0 auto 18px;
+    border:3px solid var(--border);
+    background:var(--card);
+    box-shadow:0 12px 40px rgba(0,0,0,.45);
+  }
+  h1{font-size:1.5rem;font-weight:700;margin:0 0 4px;letter-spacing:-.01em}
+  .handle{color:var(--accent);font-weight:600;font-size:.95rem;margin:0 0 12px}
+  .bio{color:var(--text);font-size:1rem;line-height:1.55;margin:0 auto 14px;max-width:420px}
+  .facts{
+    list-style:none;padding:0;margin:0 auto 28px;max-width:420px;
+    display:flex;flex-direction:column;gap:6px;
+    color:var(--muted);font-size:.94rem;line-height:1.5;
+  }
+  .facts li{display:flex;align-items:baseline;gap:10px;text-align:left}
+  .facts .emoji{flex:none;width:1.3rem}
+
+  .links{display:flex;flex-direction:column;gap:14px;margin-bottom:32px}
+  .link{
+    display:flex;align-items:center;gap:14px;
+    padding:16px 18px;border-radius:16px;
+    background:var(--card);
+    border:1px solid var(--border);
+    color:var(--text);text-decoration:none;
+    font-weight:600;font-size:1rem;
+    backdrop-filter:blur(8px);
+    transition:transform .16s ease, background .16s ease, border-color .16s ease;
+  }
+  .link:hover{background:var(--card-hover);border-color:var(--accent);transform:translateY(-2px)}
+  .link:active{transform:translateY(0)}
+  .link .emoji{font-size:1.2rem;width:1.5rem;flex:none}
+  .link .txt{flex:1;text-align:left}
+  .link .sub{display:block;font-weight:400;font-size:.8rem;color:var(--muted);margin-top:2px}
+  .link.primary{background:var(--accent);color:#06231a;border-color:transparent}
+  .link.primary .sub{color:rgba(6,35,26,.7)}
+  .link.primary:hover{background:#54e9a8}
+
+  .socials{display:flex;justify-content:center;gap:12px;margin-bottom:36px}
+  .socials a{
+    width:44px;height:44px;border-radius:50%;
+    display:grid;place-items:center;
+    background:var(--card);border:1px solid var(--border);
+    color:var(--text);transition:background .16s ease,transform .16s ease;
+  }
+  .socials a:hover{background:var(--card-hover);transform:translateY(-2px)}
+  .socials svg{width:20px;height:20px;fill:currentColor}
+
+  footer{color:var(--muted);font-size:.78rem}
+  footer a{color:var(--muted)}
+
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<main class="page">
+
+  <!-- Swap for your own image: put avatar.jpg next to this file -->
+  <img class="avatar" src="https://avatars.githubusercontent.com/almas-invests" alt="Profile photo">
+
+  <h1>Almas</h1>
+  <p class="handle">@almas-invests</p>
+  <p class="bio">Helping people to start with invest</p>
+  <ul class="facts">
+    <li><span class="emoji">🧑🏻‍💻</span> Daytime Big Tech engineer</li>
+    <li><span class="emoji">📈</span> Nighttime long-term investor</li>
+    <li><span class="emoji">🚀</span> Building my path to early retirement</li>
+  </ul>
+
+  <nav class="links">
+    <a class="link primary" href="#" target="_blank" rel="noopener">
+      <span class="emoji">🚀</span>
+      <span class="txt">Featured link
+        <span class="sub">Your main call to action</span>
+      </span>
+    </a>
+    <a class="link" href="#" target="_blank" rel="noopener">
+      <span class="emoji">📬</span>
+      <span class="txt">Newsletter
+        <span class="sub">Weekly notes on markets</span>
+      </span>
+    </a>
+    <a class="link" href="#" target="_blank" rel="noopener">
+      <span class="emoji">📝</span>
+      <span class="txt">Blog</span>
+    </a>
+    <a class="link" href="https://github.com/almas-invests" target="_blank" rel="noopener">
+      <span class="emoji">💻</span>
+      <span class="txt">GitHub</span>
+    </a>
+    <a class="link" href="mailto:you@example.com">
+      <span class="emoji">✉️</span>
+      <span class="txt">Contact me</span>
+    </a>
+  </nav>
+
+  <div class="socials">
+    <a href="#" target="_blank" rel="noopener" aria-label="X">
+      <svg viewBox="0 0 24 24"><path d="M18.9 2H22l-7.1 8.1L23.3 22h-6.6l-5.2-6.8L5.6 22H2.5l7.6-8.7L1.1 2h6.8l4.7 6.2L18.9 2Zm-1.1 18h1.7L7.3 3.7H5.5L17.8 20Z"/></svg>
+    </a>
+    <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.76-1.95C21.6 8.75 23 11 23 14.2V21h-4v-6c0-1.5-.03-3.4-2.1-3.4-2.1 0-2.4 1.6-2.4 3.3V21h-4V9Z"/></svg>
+    </a>
+    <a href="#" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 1.8.25 2.2.42.6.22 1 .48 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c0 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2 0-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c0-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2Zm0 3.1a6.7 6.7 0 1 0 0 13.4 6.7 6.7 0 0 0 0-13.4Zm0 11a4.3 4.3 0 1 1 0-8.6 4.3 4.3 0 0 1 0 8.6Zm6.9-11.3a1.6 1.6 0 1 1-3.1 0 1.6 1.6 0 0 1 3.1 0Z"/></svg>
+    </a>
+    <a href="#" target="_blank" rel="noopener" aria-label="YouTube">
+      <svg viewBox="0 0 24 24"><path d="M23 12s0-3.4-.4-5c-.2-.9-.9-1.6-1.8-1.8C19.2 4.8 12 4.8 12 4.8s-7.2 0-8.8.4c-.9.2-1.6.9-1.8 1.8C1 8.6 1 12 1 12s0 3.4.4 5c.2.9.9 1.6 1.8 1.8 1.6.4 8.8.4 8.8.4s7.2 0 8.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.6.4-5 .4-5ZM9.8 15.3V8.7l6 3.3-6 3.3Z"/></svg>
+    </a>
+  </div>
+
+  <footer>© <span id="year"></span> Almas</footer>
+</main>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
