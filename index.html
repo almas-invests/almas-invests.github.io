@@ -1,274 +1,542 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Almas Invests</title>
-<meta name="description" content="Helping people to start with invest.">
-<meta property="og:title" content="Almas Invests">
-<meta property="og:description" content="Helping people to start with invest.">
-<meta property="og:type" content="website">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Almas Invests</title>
+    <meta
+      name="description"
+      content="Helping people to start with investing."
+    />
+    <meta property="og:title" content="Almas Invests" />
+    <meta
+      property="og:description"
+      content="Helping people to start with investing."
+    />
+    <meta property="og:type" content="website" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>"
+    />
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
+      function gtag() {
         dataLayer.push(arguments);
-    }
+      }
 
-    gtag('js', new Date());
+      gtag("js", new Date());
 
-    gtag('config', 'G-XXXXXXXXXX');
-</script>
+      gtag("config", "G-XXXXXXXXXX");
+    </script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --green-deep:#00523f;   /* product card text */
-    --green:#1b6250;        /* primary brand green */
-    --green-mid:#0e4c3d;    /* CTA button text */
-    --mint:#e3f2ef;         /* link button background */
-    --mint-dark:#c4e1da;    /* CTA button background */
-    --peach:#faede6;         /* product card background */
-    --card:#fffdfc;          /* page card */
-    --page-bg:#dfeeea;
-    --radius:24px;
-  }
-  *{box-sizing:border-box}
-  body{
-    margin:0;
-    font-family:Poppins,Helvetica,sans-serif;
-    color:var(--green);
-    background:
-      radial-gradient(1000px 520px at 50% 0%, #f0f7f5, transparent 70%),
-      var(--page-bg);
-    background-attachment:fixed;
-    padding:40px 16px 96px;
-    display:flex;
-    justify-content:center;
-  }
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --green-deep: #00523f; /* product card text */
+        --green: #1b6250; /* primary brand green */
+        --green-mid: #0e4c3d; /* CTA button text */
+        --mint: #e3f2ef; /* link button background */
+        --mint-dark: #c4e1da; /* CTA button background */
+        --peach: #faede6; /* product card background */
+        --card: #fffdfc; /* page card */
+        --page-bg: #dfeeea;
+        --radius: 24px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Poppins, Helvetica, sans-serif;
+        color: var(--green);
+        background:
+          radial-gradient(1000px 520px at 50% 0%, #f0f7f5, transparent 70%),
+          var(--page-bg);
+        background-attachment: fixed;
+        padding: 40px 16px 96px;
+        display: flex;
+        justify-content: center;
+      }
 
-  .card{
-    width:100%;max-width:720px;
-    background:var(--card);
-    border-radius:var(--radius);
-    padding:40px 28px 44px;
-  }
+      .card {
+        width: 100%;
+        max-width: 720px;
+        background: var(--card);
+        border-radius: var(--radius);
+        padding: 40px 28px 44px;
+      }
 
-  /* ---------- header ---------- */
-  header{text-align:center;margin-bottom:28px}
-  .avatar{
-    width:96px;height:96px;border-radius:10000px;
-    object-fit:cover;display:block;margin:0 auto 16px;
-    border:2px solid var(--green);
-  }
-  h1{
-    font-size:48px;line-height:1.1;font-weight:700;
-    color:var(--green);margin:0 0 14px;padding:0 20px;
-  }
-  .tagline{font-size:17px;font-weight:600;margin:0 0 10px;color:var(--green)}
-  .facts{
-    list-style:none;padding:0;margin:0 auto;max-width:440px;
-    display:flex;flex-direction:column;gap:4px;
-    font-size:15px;line-height:1.55;color:var(--green);
-  }
-  .facts li{display:flex;align-items:baseline;gap:10px;text-align:left}
-  .facts .emoji{flex:none;width:1.4rem}
+      /* ---------- header ---------- */
+      header {
+        text-align: center;
+        margin-bottom: 28px;
+      }
+      .avatar {
+        width: 96px;
+        height: 96px;
+        border-radius: 10000px;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto 16px;
+        border: 2px solid var(--green);
+      }
+      h1 {
+        font-size: 48px;
+        line-height: 1.1;
+        font-weight: 700;
+        color: var(--green);
+        margin: 0 0 14px;
+        padding: 0 20px;
+      }
+      .tagline {
+        font-size: 17px;
+        font-weight: 600;
+        margin: 0 0 10px;
+        color: var(--green);
+      }
+      .facts {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        max-width: 440px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        font-size: 15px;
+        line-height: 1.55;
+        color: var(--green);
+      }
+      .facts li {
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        text-align: left;
+      }
+      .facts .emoji {
+        flex: none;
+        width: 1.4rem;
+      }
 
-  /* ---------- socials ---------- */
-  .socials{display:flex;justify-content:center;gap:6px;margin:22px 0 30px}
-  .socials a{display:inline-flex;border-radius:50%;transition:background .15s ease}
-  .socials a:hover{background:var(--mint)}
-  .socials svg{fill:var(--green);width:28px;height:28px;padding:8px;box-sizing:content-box}
+      /* ---------- socials ---------- */
+      .socials {
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+        margin: 22px 0 30px;
+      }
+      .socials a {
+        display: inline-flex;
+        border-radius: 50%;
+        transition: background 0.15s ease;
+      }
+      .socials a:hover {
+        background: var(--mint);
+      }
+      .socials svg {
+        fill: var(--green);
+        width: 28px;
+        height: 28px;
+        padding: 8px;
+        box-sizing: content-box;
+      }
 
-  /* ---------- link buttons ---------- */
-  .links{display:flex;flex-direction:column;gap:14px}
-  .link{
-    display:flex;align-items:center;gap:12px;
-    min-height:65px;padding:8px;
-    border-radius:var(--radius);
-    background:var(--mint);color:var(--green);
-    border:2px solid rgba(255,255,255,0);
-    font-size:15px;text-decoration:none;
-    transition:border-color .15s ease, transform .15s ease;
-  }
-  .link:hover{border-color:var(--green);transform:translateY(-1px)}
-  .link .thumb{
-    width:49px;height:49px;flex:none;border-radius:18px;
-    object-fit:cover;background:var(--mint-dark);
-  }
-  .link .body{flex:1;min-width:0;padding-right:8px}
-  .link .title{font-weight:600;display:block}
-  .link .desc{display:block;font-weight:400;font-size:13px;line-height:1.4;margin-top:2px;opacity:.85}
+      /* ---------- link buttons ---------- */
+      .links {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+      .link {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-height: 65px;
+        padding: 8px;
+        border-radius: var(--radius);
+        background: var(--mint);
+        color: var(--green);
+        border: 2px solid rgba(255, 255, 255, 0);
+        font-size: 15px;
+        text-decoration: none;
+        transition:
+          border-color 0.15s ease,
+          transform 0.15s ease;
+      }
+      .link:hover {
+        border-color: var(--green);
+        transform: translateY(-1px);
+      }
+      .link .thumb {
+        width: 49px;
+        height: 49px;
+        flex: none;
+        border-radius: 18px;
+        object-fit: cover;
+        background: var(--mint-dark);
+      }
+      .link .body {
+        flex: 1;
+        min-width: 0;
+        padding-right: 8px;
+      }
+      .link .title {
+        font-weight: 600;
+        display: block;
+      }
+      .link .desc {
+        display: block;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 1.4;
+        margin-top: 2px;
+        opacity: 0.85;
+      }
 
-  /* ---------- section heading ---------- */
-  h2{
-    font-size:20px;font-weight:600;color:var(--green);
-    margin:38px 0 16px;text-align:center;
-  }
+      /* ---------- section heading ---------- */
+      h2 {
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--green);
+        margin: 38px 0 16px;
+        text-align: center;
+      }
 
-  /* ---------- product cards ---------- */
-  .products{display:grid;grid-template-columns:repeat(1,minmax(0,1fr));gap:16px}
-  .product{
-    background:var(--peach);border-radius:var(--radius);
-    overflow:hidden;color:var(--green-deep);text-decoration:none;
-    display:flex;flex-direction:column;
-    transition:transform .15s ease;
-  }
-  .product:hover{transform:translateY(-2px)}
-  .product .cover{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:var(--mint-dark)}
-  .product .info{padding:16px 18px 18px}
-  .product .name{font-weight:700;font-size:17px;word-break:break-word}
-  .product .sub{font-weight:600;font-size:14px;margin-top:4px;opacity:.8;word-break:break-word}
-  .product .row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px}
-  .product .price{font-weight:600;font-size:15px}
-  .product .cta{
-    background:var(--mint-dark);color:inherit;
-    border-radius:var(--radius);box-shadow:none;
-    padding:9px 18px;font-weight:600;font-size:14px;
-    font-family:inherit;border:0;cursor:pointer;white-space:nowrap;
-  }
+      /* ---------- product cards ---------- */
+      .products {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 16px;
+      }
+      .product {
+        background: var(--peach);
+        border-radius: var(--radius);
+        overflow: hidden;
+        color: var(--green-deep);
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.15s ease;
+      }
+      .product:hover {
+        transform: translateY(-2px);
+      }
+      .product .cover {
+        width: 100%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+        display: block;
+        background: var(--mint-dark);
+      }
+      .product .info {
+        padding: 16px 18px 18px;
+      }
+      .product .name {
+        font-weight: 700;
+        font-size: 17px;
+        word-break: break-word;
+      }
+      .product .sub {
+        font-weight: 600;
+        font-size: 14px;
+        margin-top: 4px;
+        opacity: 0.8;
+        word-break: break-word;
+      }
+      .product .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 14px;
+      }
+      .product .price {
+        font-weight: 600;
+        font-size: 15px;
+      }
+      .product .cta {
+        background: var(--mint-dark);
+        color: inherit;
+        border-radius: var(--radius);
+        box-shadow: none;
+        padding: 9px 18px;
+        font-weight: 600;
+        font-size: 14px;
+        font-family: inherit;
+        border: 0;
+        cursor: pointer;
+        white-space: nowrap;
+      }
 
-  /* ---------- subscribe ---------- */
-  .subscribe{
-    margin-top:38px;padding:24px 20px;border-radius:var(--radius);
-    background:var(--mint);text-align:center;
-  }
-  .subscribe h3{margin:0 0 6px;font-size:18px;font-weight:600;color:var(--green)}
-  .subscribe p{margin:0 0 16px;font-size:14px;color:var(--green);opacity:.85}
-  .subscribe form{display:flex;gap:10px;max-width:420px;margin:0 auto}
-  .subscribe input{
-    flex:1;min-width:0;padding:12px 16px;border-radius:var(--radius);
-    border:2px solid transparent;background:var(--card);
-    font-family:inherit;font-size:14px;color:var(--green);
-  }
-  .subscribe input:focus{outline:none;border-color:var(--green)}
-  .subscribe button{
-    background:var(--green);color:#fff;border:0;cursor:pointer;
-    border-radius:var(--radius);padding:12px 22px;
-    font-family:inherit;font-weight:600;font-size:14px;
-  }
+      /* ---------- subscribe ---------- */
+      .subscribe {
+        margin-top: 38px;
+        padding: 24px 20px;
+        border-radius: var(--radius);
+        background: var(--mint);
+        text-align: center;
+      }
+      .subscribe h3 {
+        margin: 0 0 6px;
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--green);
+      }
+      .subscribe p {
+        margin: 0 0 16px;
+        font-size: 14px;
+        color: var(--green);
+        opacity: 0.85;
+      }
+      .subscribe form {
+        display: flex;
+        gap: 10px;
+        max-width: 420px;
+        margin: 0 auto;
+      }
+      .subscribe input {
+        flex: 1;
+        min-width: 0;
+        padding: 12px 16px;
+        border-radius: var(--radius);
+        border: 2px solid transparent;
+        background: var(--card);
+        font-family: inherit;
+        font-size: 14px;
+        color: var(--green);
+      }
+      .subscribe input:focus {
+        outline: none;
+        border-color: var(--green);
+      }
+      .subscribe button {
+        background: var(--green);
+        color: #fff;
+        border: 0;
+        cursor: pointer;
+        border-radius: var(--radius);
+        padding: 12px 22px;
+        font-family: inherit;
+        font-weight: 600;
+        font-size: 14px;
+      }
 
-  footer{margin-top:32px;text-align:center;font-size:12px;color:var(--green);opacity:.6}
+      footer {
+        margin-top: 32px;
+        text-align: center;
+        font-size: 12px;
+        color: var(--green);
+        opacity: 0.6;
+      }
 
-  @media (max-width:600px){
-    .card{padding:32px 18px 36px}
-    h1{font-size:34px;padding:0}
-    .subscribe form{flex-direction:column}
-  }
-  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
-</style>
-</head>
-<body>
-<main class="card">
+      @media (max-width: 600px) {
+        .card {
+          padding: 32px 18px 36px;
+        }
+        h1 {
+          font-size: 34px;
+          padding: 0;
+        }
+        .subscribe form {
+          flex-direction: column;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          transition: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <header>
+        <!-- Swap for your own image: drop avatar.jpg next to this file -->
+        <img
+          class="avatar"
+          src="https://avatars.githubusercontent.com/almas-invests"
+          alt="Almas"
+        />
+        <h1>almasinvests</h1>
+        <p class="tagline">Helping people to start with invest</p>
+        <ul class="facts">
+          <li><span class="emoji">🧑🏻‍💻</span> Daytime Big Tech engineer</li>
+          <li><span class="emoji">📈</span> Nighttime long-term investor</li>
+          <li>
+            <span class="emoji">🚀</span> Building my path to early retirement
+          </li>
+        </ul>
+      </header>
 
-  <header>
-    <!-- Swap for your own image: drop avatar.jpg next to this file -->
-    <img class="avatar" src="https://avatars.githubusercontent.com/almas-invests" alt="Almas">
-    <h1>almasinvests</h1>
-    <p class="tagline">Helping people to start with invest</p>
-    <ul class="facts">
-      <li><span class="emoji">🧑🏻‍💻</span> Daytime Big Tech engineer</li>
-      <li><span class="emoji">📈</span> Nighttime long-term investor</li>
-      <li><span class="emoji">🚀</span> Building my path to early retirement</li>
-    </ul>
-  </header>
-
-  <div class="socials">
-    <a href="#" target="_blank" rel="noopener" aria-label="Instagram">
-      <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 1.8.25 2.2.42.6.22 1 .48 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c0 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2 0-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c0-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2Zm0 3.1a6.7 6.7 0 1 0 0 13.4 6.7 6.7 0 0 0 0-13.4Zm0 11a4.3 4.3 0 1 1 0-8.6 4.3 4.3 0 0 1 0 8.6Zm6.9-11.3a1.6 1.6 0 1 1-3.1 0 1.6 1.6 0 0 1 3.1 0Z"/></svg>
-    </a>
-    <a href="#" target="_blank" rel="noopener" aria-label="TikTok">
-      <svg viewBox="0 0 24 24"><path d="M16.6 2h-3.2v13.4a2.7 2.7 0 1 1-2.2-2.7v-3.2a5.9 5.9 0 1 0 5.4 5.9V8.9a6.9 6.9 0 0 0 4 1.3V7A4 4 0 0 1 16.6 2Z"/></svg>
-    </a>
-    <a href="#" target="_blank" rel="noopener" aria-label="YouTube">
-      <svg viewBox="0 0 24 24"><path d="M23 12s0-3.4-.4-5c-.2-.9-.9-1.6-1.8-1.8C19.2 4.8 12 4.8 12 4.8s-7.2 0-8.8.4c-.9.2-1.6.9-1.8 1.8C1 8.6 1 12 1 12s0 3.4.4 5c.2.9.9 1.6 1.8 1.8 1.6.4 8.8.4 8.8.4s7.2 0 8.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.6.4-5 .4-5ZM9.8 15.3V8.7l6 3.3-6 3.3Z"/></svg>
-    </a>
-    <a href="#" target="_blank" rel="noopener" aria-label="X">
-      <svg viewBox="0 0 24 24"><path d="M18.9 2H22l-7.1 8.1L23.3 22h-6.6l-5.2-6.8L5.6 22H2.5l7.6-8.7L1.1 2h6.8l4.7 6.2L18.9 2Zm-1.1 18h1.7L7.3 3.7H5.5L17.8 20Z"/></svg>
-    </a>
-  </div>
-
-  <nav class="links">
-    <a class="link" href="#" target="_blank" rel="noopener">
-      <img class="thumb" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" alt="">
-      <span class="body">
-        <span class="title">Featured link</span>
-        <span class="desc">Your main call to action goes here — the offer you most want people to click.</span>
-      </span>
-    </a>
-    <a class="link" href="#" target="_blank" rel="noopener">
-      <img class="thumb" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" alt="">
-      <span class="body">
-        <span class="title">Brokerage referral</span>
-        <span class="desc">Get a bonus when you open your first investing account.</span>
-      </span>
-    </a>
-    <a class="link" href="#" target="_blank" rel="noopener">
-      <img class="thumb" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" alt="">
-      <span class="body">
-        <span class="title">See My Portfolio</span>
-        <span class="desc">Sign up for free!</span>
-      </span>
-    </a>
-    <a class="link" href="https://github.com/almas-invests" target="_blank" rel="noopener">
-      <img class="thumb" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" alt="">
-      <span class="body">
-        <span class="title">GitHub</span>
-        <span class="desc">What I build during the day.</span>
-      </span>
-    </a>
-  </nav>
-
-  <h2>Money Resources</h2>
-  <div class="products">
-    <a class="product" href="#" target="_blank" rel="noopener">
-      <img class="cover" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" alt="">
-      <div class="info">
-        <div class="name">Automated Budget Template</div>
-        <div class="sub">Gain control of your money</div>
-        <div class="row"><span class="price">$12</span><span class="cta">Buy now</span></div>
+      <div class="socials">
+        <a href="#" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 1.8.25 2.2.42.6.22 1 .48 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c0 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2 0-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c0-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2Zm0 3.1a6.7 6.7 0 1 0 0 13.4 6.7 6.7 0 0 0 0-13.4Zm0 11a4.3 4.3 0 1 1 0-8.6 4.3 4.3 0 0 1 0 8.6Zm6.9-11.3a1.6 1.6 0 1 1-3.1 0 1.6 1.6 0 0 1 3.1 0Z"
+            />
+          </svg>
+        </a>
+        <a href="#" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M16.6 2h-3.2v13.4a2.7 2.7 0 1 1-2.2-2.7v-3.2a5.9 5.9 0 1 0 5.4 5.9V8.9a6.9 6.9 0 0 0 4 1.3V7A4 4 0 0 1 16.6 2Z"
+            />
+          </svg>
+        </a>
+        <a href="#" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M23 12s0-3.4-.4-5c-.2-.9-.9-1.6-1.8-1.8C19.2 4.8 12 4.8 12 4.8s-7.2 0-8.8.4c-.9.2-1.6.9-1.8 1.8C1 8.6 1 12 1 12s0 3.4.4 5c.2.9.9 1.6 1.8 1.8 1.6.4 8.8.4 8.8.4s7.2 0 8.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.6.4-5 .4-5ZM9.8 15.3V8.7l6 3.3-6 3.3Z"
+            />
+          </svg>
+        </a>
+        <a href="#" target="_blank" rel="noopener" aria-label="X">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M18.9 2H22l-7.1 8.1L23.3 22h-6.6l-5.2-6.8L5.6 22H2.5l7.6-8.7L1.1 2h6.8l4.7 6.2L18.9 2Zm-1.1 18h1.7L7.3 3.7H5.5L17.8 20Z"
+            />
+          </svg>
+        </a>
       </div>
-    </a>
-    <a class="product" href="#" target="_blank" rel="noopener">
-      <img class="cover" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" alt="">
-      <div class="info">
-        <div class="name">Money Clarity 1:1</div>
-        <div class="sub">30min financial consultation</div>
-        <div class="row"><span class="price">$149</span><span class="cta">Book a time</span></div>
+
+      <nav class="links">
+        <a class="link" href="#" target="_blank" rel="noopener">
+          <img
+            class="thumb"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E"
+            alt=""
+          />
+          <span class="body">
+            <span class="title">Featured link</span>
+            <span class="desc"
+              >Your main call to action goes here — the offer you most want
+              people to click.</span
+            >
+          </span>
+        </a>
+        <a class="link" href="#" target="_blank" rel="noopener">
+          <img
+            class="thumb"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E"
+            alt=""
+          />
+          <span class="body">
+            <span class="title">Brokerage referral</span>
+            <span class="desc"
+              >Get a bonus when you open your first investing account.</span
+            >
+          </span>
+        </a>
+        <a class="link" href="#" target="_blank" rel="noopener">
+          <img
+            class="thumb"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E"
+            alt=""
+          />
+          <span class="body">
+            <span class="title">See My Portfolio</span>
+            <span class="desc">Sign up for free!</span>
+          </span>
+        </a>
+        <a
+          class="link"
+          href="https://github.com/almas-invests"
+          target="_blank"
+          rel="noopener"
+        >
+          <img
+            class="thumb"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E"
+            alt=""
+          />
+          <span class="body">
+            <span class="title">GitHub</span>
+            <span class="desc">What I build during the day.</span>
+          </span>
+        </a>
+      </nav>
+
+      <h2>Money Resources</h2>
+      <div class="products">
+        <a class="product" href="#" target="_blank" rel="noopener">
+          <img
+            class="cover"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E"
+            alt=""
+          />
+          <div class="info">
+            <div class="name">Automated Budget Template</div>
+            <div class="sub">Gain control of your money</div>
+            <div class="row">
+              <span class="price">$12</span><span class="cta">Buy now</span>
+            </div>
+          </div>
+        </a>
+        <a class="product" href="#" target="_blank" rel="noopener">
+          <img
+            class="cover"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E"
+            alt=""
+          />
+          <div class="info">
+            <div class="name">Money Clarity 1:1</div>
+            <div class="sub">30min financial consultation</div>
+            <div class="row">
+              <span class="price">$149</span
+              ><span class="cta">Book a time</span>
+            </div>
+          </div>
+        </a>
       </div>
-    </a>
-  </div>
 
-  <h2>Freebies</h2>
-  <div class="products">
-    <a class="product" href="#" target="_blank" rel="noopener">
-      <img class="cover" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" alt="">
-      <div class="info">
-        <div class="name">The Guide to Master your Money</div>
-        <div class="sub">Budgeting guide</div>
-        <div class="row"><span class="price">$0</span><span class="cta">Get for free</span></div>
+      <h2>Freebies</h2>
+      <div class="products">
+        <a class="product" href="#" target="_blank" rel="noopener">
+          <img
+            class="cover"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E"
+            alt=""
+          />
+          <div class="info">
+            <div class="name">The Guide to Master your Money</div>
+            <div class="sub">Budgeting guide</div>
+            <div class="row">
+              <span class="price">$0</span><span class="cta">Get for free</span>
+            </div>
+          </div>
+        </a>
       </div>
-    </a>
-  </div>
 
-  <section class="subscribe">
-    <h3>Subscribe to almasinvests</h3>
-    <p>Sign up to get exclusive email updates directly from me.</p>
-    <!-- Point action= at your email provider's form endpoint (Buttondown, ConvertKit, Mailchimp...) -->
-    <form action="#" method="post">
-      <input type="email" name="email" placeholder="Your email address" required>
-      <button type="submit">Subscribe</button>
-    </form>
-  </section>
+      <section class="subscribe">
+        <h3>Subscribe to almasinvests</h3>
+        <p>Sign up to get exclusive email updates directly from me.</p>
+        <!-- Point action= at your email provider's form endpoint (Buttondown, ConvertKit, Mailchimp...) -->
+        <form action="#" method="post">
+          <input
+            type="email"
+            name="email"
+            placeholder="Your email address"
+            required
+          />
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
 
-  <footer>© <span id="year"></span> Almas</footer>
-</main>
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
-</body>
+      <footer>© <span id="year"></span> Almas</footer>
+    </main>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
