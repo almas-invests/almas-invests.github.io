@@ -85,13 +85,13 @@
         margin-bottom: 28px;
       }
       .avatar {
-        width: 96px;
-        height: 96px;
+        width: 320px;
+        height: 320px;
         border-radius: 10000px;
         object-fit: cover;
         display: block;
-        margin: 0 auto 16px;
-        border: 2px solid var(--green);
+        margin: 0 auto 20px;
+        border: 3px solid var(--green);
       }
       h1 {
         font-size: 48px;
@@ -253,6 +253,48 @@
       .product:hover {
         transform: translateY(-2px);
       }
+      /* travelling light around the border */
+      @property --glow-angle {
+        syntax: "<angle>";
+        initial-value: 0deg;
+        inherits: false;
+      }
+      .product.glow {
+        position: relative;
+      }
+      .product.glow::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        pointer-events: none;
+        border-radius: inherit;
+        padding: 3px;
+        background: conic-gradient(
+          from var(--glow-angle),
+          transparent 0turn,
+          transparent 0.62turn,
+          rgba(27, 98, 80, 0.35) 0.78turn,
+          #6ee7b7 0.93turn,
+          #ffffff 0.98turn,
+          transparent 1turn
+        );
+        /* punch out the middle so only the border ring paints */
+        -webkit-mask:
+          linear-gradient(#000 0 0) content-box,
+          linear-gradient(#000 0 0);
+        -webkit-mask-composite: xor;
+        mask:
+          linear-gradient(#000 0 0) content-box,
+          linear-gradient(#000 0 0);
+        mask-composite: exclude;
+        animation: glow-run 2s linear infinite;
+      }
+      @keyframes glow-run {
+        to {
+          --glow-angle: 360deg;
+        }
+      }
       .product.is-disabled {
         cursor: default;
         opacity: 0.75;
@@ -336,37 +378,9 @@
         color: var(--green);
         opacity: 0.85;
       }
-      .subscribe form {
-        display: flex;
-        gap: 10px;
-        max-width: 420px;
-        margin: 0 auto;
-      }
-      .subscribe input {
-        flex: 1;
-        min-width: 0;
-        padding: 12px 16px;
-        border-radius: var(--radius);
-        border: 2px solid transparent;
-        background: var(--card);
-        font-family: inherit;
-        font-size: 14px;
-        color: var(--green);
-      }
-      .subscribe input:focus {
-        outline: none;
-        border-color: var(--green);
-      }
-      .subscribe button {
-        background: var(--green);
-        color: #fff;
-        border: 0;
-        cursor: pointer;
-        border-radius: var(--radius);
-        padding: 12px 22px;
-        font-family: inherit;
-        font-weight: 600;
-        font-size: 14px;
+      /* the Kit embed brings its own form styling */
+      .subscribe .formkit-form {
+        margin: 0 auto !important;
       }
 
       footer {
@@ -385,13 +399,14 @@
           font-size: 34px;
           padding: 0;
         }
-        .subscribe form {
-          flex-direction: column;
-        }
       }
       @media (prefers-reduced-motion: reduce) {
         * {
           transition: none !important;
+        }
+        .product.glow::before {
+          animation: none;
+          background: rgba(27, 98, 80, 0.35);
         }
       }
     </style>
@@ -403,8 +418,8 @@
           class="avatar"
           src="images/me.png"
           alt="Almas"
-          width="96"
-          height="96"
+          width="160"
+          height="160"
         />
         <h1>Almas Invests</h1>
         <p class="tagline">Helping people to start investing</p>
@@ -523,18 +538,12 @@
 
       <h2>Your investing journey starts here</h2>
       <div class="products">
-        <div class="product is-disabled">
-          <img class="cover" src="images/excel.png" alt="" />
-          <div class="info">
-            <div class="name">Automated Budget Template</div>
-            <div class="sub">Gain control of your money</div>
-            <div class="row">
-              <span class="price">$12</span
-              ><span class="cta" aria-disabled="true">Coming soon</span>
-            </div>
-          </div>
-        </div>
-        <a class="product" href="https://cal.com/almas-abdrazak-ocjuli/30min" target="_blank" rel="noopener">
+        <a
+          class="product glow"
+          href="https://cal.com/almas-abdrazak-ocjuli/30min"
+          target="_blank"
+          rel="noopener"
+        >
           <img
             class="cover"
             src="images/calendar.webp"
@@ -549,21 +558,25 @@
             </div>
           </div>
         </a>
+        <div class="product is-disabled">
+          <img class="cover" src="images/excel.png" alt="" />
+          <div class="info">
+            <div class="name">Automated Budget Template</div>
+            <div class="sub">Gain control of your money</div>
+            <div class="row">
+              <span class="price">$12</span
+              ><span class="cta" aria-disabled="true">Coming soon</span>
+            </div>
+          </div>
+        </div>
       </div>
 
       <section class="subscribe">
         <h3>Subscribe to almasinvests</h3>
         <p>Sign up to get exclusive email updates directly from me.</p>
-        <!-- Point action= at your email provider's form endpoint (Buttondown, ConvertKit, Mailchimp...) -->
-        <form action="#" method="post">
-          <input
-            type="email"
-            name="email"
-            placeholder="Your email address"
-            required
-          />
-          <button type="submit">Subscribe</button>
-        </form>
+        <!-- Kit (kit.com) embedded form — styling lives in the form's
+             "Custom CSS" panel on kit.com, not in this file. -->
+             <script async data-uid="9dc7b3652c" src="https://almas-invests.kit.com/9dc7b3652c/index.js"></script>
       </section>
 
       <footer>© <span id="year"></span> Almas Invests</footer>
