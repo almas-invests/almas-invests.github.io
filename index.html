@@ -187,6 +187,26 @@
         object-fit: cover;
         background: var(--mint-dark);
       }
+      .link .thumb.icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .link .thumb.icon svg {
+        width: 26px;
+        height: 26px;
+        fill: var(--green);
+      }
+      .link .thumb.monogram {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #1c1c1c;
+        color: #fff;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 1;
+      }
       .link .body {
         flex: 1;
         min-width: 0;
@@ -370,8 +390,8 @@
           width="96"
           height="96"
         />
-        <h1>almasinvests</h1>
-        <p class="tagline">Helping people to start with invest</p>
+        <h1>almas_invests</h1>
+        <p class="tagline">Helping people to start investing</p>
         <ul class="facts">
           <li><span class="emoji">🧑🏻‍💻</span> Daytime Big Tech engineer</li>
           <li><span class="emoji">📈</span> Nighttime long-term investor</li>
@@ -382,28 +402,48 @@
       </header>
 
       <div class="socials">
-        <a href="#" target="_blank" rel="noopener" aria-label="Instagram">
+        <a
+          href="https://www.instagram.com/almas_invests"
+          target="_blank"
+          rel="noopener"
+          aria-label="Instagram"
+        >
           <svg viewBox="0 0 24 24">
             <path
               d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 1.8.25 2.2.42.6.22 1 .48 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c0 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2 0-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c0-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2Zm0 3.1a6.7 6.7 0 1 0 0 13.4 6.7 6.7 0 0 0 0-13.4Zm0 11a4.3 4.3 0 1 1 0-8.6 4.3 4.3 0 0 1 0 8.6Zm6.9-11.3a1.6 1.6 0 1 1-3.1 0 1.6 1.6 0 0 1 3.1 0Z"
             />
           </svg>
         </a>
-        <a href="#" target="_blank" rel="noopener" aria-label="TikTok">
+        <a
+          href="https://www.tiktok.com/@almasinvests"
+          target="_blank"
+          rel="noopener"
+          aria-label="TikTok"
+        >
           <svg viewBox="0 0 24 24">
             <path
               d="M16.6 2h-3.2v13.4a2.7 2.7 0 1 1-2.2-2.7v-3.2a5.9 5.9 0 1 0 5.4 5.9V8.9a6.9 6.9 0 0 0 4 1.3V7A4 4 0 0 1 16.6 2Z"
             />
           </svg>
         </a>
-        <a href="#" target="_blank" rel="noopener" aria-label="YouTube">
+        <a
+          href="https://www.youtube.com/@Almas_invests"
+          target="_blank"
+          rel="noopener"
+          aria-label="YouTube"
+        >
           <svg viewBox="0 0 24 24">
             <path
               d="M23 12s0-3.4-.4-5c-.2-.9-.9-1.6-1.8-1.8C19.2 4.8 12 4.8 12 4.8s-7.2 0-8.8.4c-.9.2-1.6.9-1.8 1.8C1 8.6 1 12 1 12s0 3.4.4 5c.2.9.9 1.6 1.8 1.8 1.6.4 8.8.4 8.8.4s7.2 0 8.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.6.4-5 .4-5ZM9.8 15.3V8.7l6 3.3-6 3.3Z"
             />
           </svg>
         </a>
-        <a href="#" target="_blank" rel="noopener" aria-label="X">
+        <a
+          href="https://x.com/AbdrazakAlmas"
+          target="_blank"
+          rel="noopener"
+          aria-label="X"
+        >
           <svg viewBox="0 0 24 24">
             <path
               d="M18.9 2H22l-7.1 8.1L23.3 22h-6.6l-5.2-6.8L5.6 22H2.5l7.6-8.7L1.1 2h6.8l4.7 6.2L18.9 2Zm-1.1 18h1.7L7.3 3.7H5.5L17.8 20Z"
@@ -413,63 +453,59 @@
       </div>
 
       <nav class="links">
-        <a class="link" href="#" target="_blank" rel="noopener">
-          <img
-            class="thumb"
-            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E"
-            alt=""
-          />
-          <span class="body">
-            <span class="title">Featured link</span>
-            <span class="desc"
-              >Your main call to action goes here — the offer you most want
-              people to click.</span
-            >
-          </span>
-        </a>
-        <a class="link" href="#" target="_blank" rel="noopener">
-          <img
-            class="thumb"
-            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E"
-            alt=""
-          />
-          <span class="body">
-            <span class="title">Brokerage referral</span>
-            <span class="desc"
-              >Get a bonus when you open your first investing account.</span
-            >
-          </span>
-        </a>
-        <a class="link" href="#" target="_blank" rel="noopener">
-          <img
-            class="thumb"
-            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E"
-            alt=""
-          />
+        <a
+          class="link"
+          href="https://link.blossomsocial.com/7uYa/h6m2n3g3"
+          target="_blank"
+          rel="noopener"
+        >
+          <img class="thumb" src="images/blossom.png" alt="" />
           <span class="body">
             <span class="title">See My Portfolio</span>
-            <span class="desc">Sign up for free!</span>
+            <span class="desc"
+              >See my Canadian portfolio at Blossom</span>
+        </a>
+        <a
+          class="link"
+          href="https://start.moomoo.com/0DrNwo"
+          target="_blank"
+          rel="noopener"
+        >
+          <img class="thumb" src="images/moomoo.png" alt="" />
+          <span class="body">
+            <span class="title">MooMoo</span>
+            <span class="desc"
+              >The best broker to trade USA equities</span>
+        </a>
+        <a
+          class="link"
+          href="https://wealthsimple.com/invite/HOAPXQ"
+          target="_blank"
+          rel="noopener"
+        >
+          <img class="thumb" src="images/ws.png" alt="" />
+          <span class="body">
+            <span class="title">Wealthsimple</span>
+            <span class="desc"
+              >Get $25 when you open your first investing account.</span
+            >
           </span>
         </a>
         <a
           class="link"
-          href="https://github.com/almas-invests"
+          href="https://t.me/almasinvests"
           target="_blank"
           rel="noopener"
         >
-          <img
-            class="thumb"
-            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E"
-            alt=""
-          />
+          <img class="thumb" src="images/telegram.png" alt="" />
           <span class="body">
-            <span class="title">GitHub</span>
-            <span class="desc">What I build during the day.</span>
-          </span>
+            <span class="title">Investing channel</span>
+            <span class="desc"
+              >See my live trades in the Telegram channel</span>
         </a>
       </nav>
 
-      <h2>Money Resources</h2>
+      <h2>Your investing journey starts here</h2>
       <div class="products">
         <a class="product" href="#" target="_blank" rel="noopener">
           <img
@@ -485,17 +521,17 @@
             </div>
           </div>
         </a>
-        <a class="product" href="#" target="_blank" rel="noopener">
+        <a class="product" href="https://cal.com/almas-abdrazak-ocjuli/30min" target="_blank" rel="noopener">
           <img
             class="cover"
-            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E"
+            src="images/calendar.webp"
             alt=""
           />
           <div class="info">
-            <div class="name">Money Clarity 1:1</div>
-            <div class="sub">30min financial consultation</div>
+            <div class="name">1:1 consultation</div>
+            <div class="sub">30 min financial consultation</div>
             <div class="row">
-              <span class="price">$149</span
+              <span class="price">Free (Promotional)</span
               ><span class="cta">Book a time</span>
             </div>
           </div>
