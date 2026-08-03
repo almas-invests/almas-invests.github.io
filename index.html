@@ -253,6 +253,22 @@
       .product:hover {
         transform: translateY(-2px);
       }
+      .product.is-disabled {
+        cursor: default;
+        opacity: 0.75;
+      }
+      .product.is-disabled:hover {
+        transform: none;
+      }
+      .product.is-disabled .cover {
+        filter: grayscale(0.4);
+      }
+      .product.is-disabled .cta {
+        background: transparent;
+        border: 1.5px solid currentColor;
+        opacity: 0.7;
+        cursor: not-allowed;
+      }
       .product .cover {
         width: 100%;
         aspect-ratio: 16/9;
@@ -507,20 +523,17 @@
 
       <h2>Your investing journey starts here</h2>
       <div class="products">
-        <a class="product" href="#" target="_blank" rel="noopener">
-          <img
-            class="cover"
-            src="images/excel.png"
-            alt=""
-          />
+        <div class="product is-disabled">
+          <img class="cover" src="images/excel.png" alt="" />
           <div class="info">
-            <div class="name">Automated Budget Template(Coming)</div>
+            <div class="name">Automated Budget Template</div>
             <div class="sub">Gain control of your money</div>
             <div class="row">
-              <span class="price">$12</span><span class="cta">Buy now</span>
+              <span class="price">$12</span
+              ><span class="cta" aria-disabled="true">Coming soon</span>
             </div>
           </div>
-        </a>
+        </div>
         <a class="product" href="https://cal.com/almas-abdrazak-ocjuli/30min" target="_blank" rel="noopener">
           <img
             class="cover"
